@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11487308}
   - 114: {fileID: 11471564}
   - 114: {fileID: 11449708}
+  - 114: {fileID: 11477440}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -208,6 +209,7 @@ MonoBehaviour:
   - {fileID: 11490504}
   - {fileID: 8162160}
   - {fileID: 2037448}
+  - {fileID: 11477440}
   remoteLayerName: RemotePlayer
 --- !u!114 &11471564
 MonoBehaviour:
@@ -229,6 +231,21 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &11477440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275e90bc9ed286c47a00229dff9b0767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToThrow: {fileID: 181250, guid: 6ef7a2dc0c4ec104a87cc0d269e8fa7c, type: 2}
+  colorList:
+  - {r: 0.71323526, g: 0.14684257, b: 0.14684257, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &11487062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,8 +334,12 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: colorList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: componentsToDisable.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
@@ -340,6 +361,26 @@ Prefab:
       propertyPath: componentsToDisable.Array.data[3]
       value: 
       objectReference: {fileID: 2037448}
+    - target: {fileID: 0}
+      propertyPath: objectToThrow
+      value: 
+      objectReference: {fileID: 181250, guid: 6ef7a2dc0c4ec104a87cc0d269e8fa7c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: componentsToDisable.Array.data[4]
+      value: 
+      objectReference: {fileID: 11477440}
+    - target: {fileID: 0}
+      propertyPath: colorList.Array.data[0].r
+      value: 0.71323526
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorList.Array.data[0].g
+      value: 0.14684257
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorList.Array.data[0].b
+      value: 0.14684257
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135596}
